@@ -1,0 +1,43 @@
+@import './../_variables';
+:host {
+    display: block;
+    .notification-wrapper {
+        @include notification-base;
+        @include position;
+        position: relative;
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        .notification-container {
+            padding: $notification-base-padding-top-bottom $notification-base-padding-left-right;
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        .action-content {
+            display: flex;
+            align-self: stretch;
+            .action {
+                display: flex;
+                align-self: stretch;
+                align-items: center;
+                justify-content: center;
+                padding: 15px 10px;
+                cursor: pointer;
+                font-weight: bold;
+                background-color: transparentize($color: $notification-bck-color, $amount: $notification-bck-transparent-amount + 0.08);
+                transition: background-color 0.4s ease;
+                &:hover {
+                    background-color: transparentize($color: $notification-bck-color + 1, $amount: $notification-bck-transparent-amount + 0.4);
+                }
+            }
+        }
+    }
+}

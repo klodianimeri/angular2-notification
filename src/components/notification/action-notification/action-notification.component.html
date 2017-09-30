@@ -1,0 +1,8 @@
+<div class="notification-wrapper" [@notificationState]="_notificationState">
+    <div class="notification-container">
+        <div class="content">{{Notification?.TextContent}}</div>
+    </div>
+    <div class="action-content" *ngIf="IsActionNotification" [ngClass]="setHighlightClasses()">
+        <div class="action" *ngFor="let action of Notification?.Actions" (click)="onActionClick(action)">{{action}}</div>
+    </div>
+</div>

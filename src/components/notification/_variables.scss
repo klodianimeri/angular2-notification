@@ -1,0 +1,59 @@
+// @import "./../../../core/style/_variables";
+$notification-bck-color: black;
+$notification-bck-transparent-amount: 0.01;
+$notification-border-transparent-amount: 0.05;
+$notification-base-padding-top-bottom: 15px;
+$notification-base-padding-left-right: 20px;
+@mixin notification-position {
+    position: fixed;
+    display: block;
+    z-index: 1999;
+    @media screen and (max-width: 576px) {
+        width: 100%;
+    }
+}
+
+@mixin notification-base {
+    display: block;
+    position: relative;
+    margin: 8px;
+    min-width: 350px;
+    max-width: 500px;
+    background-color: transparentize($color: $notification-bck-color, $amount: $notification-bck-transparent-amount);
+    border: 1px solid transparentize($color: $notification-bck-color, $amount: $notification-border-transparent-amount);
+    color: transparentize($color: white, $amount: 0.13);
+    box-shadow: 1px 1px 3px transparentize($color: $notification-bck-color, $amount: 0.43);
+    border-radius: 2px;
+    opacity: 0;
+    cursor: default;
+}
+
+@mixin position {
+    &[class*="bottom"] {
+        bottom: -20;
+    }
+    &[class*="top"] {
+        top: -20;
+    }
+    &[class*="left"] {
+        left: 0;
+    }
+    &[class*="right"] {
+        right: 0;
+    }
+}
+
+@mixin container-position {
+    &[class*="bottom"] {
+        bottom: 0;
+    }
+    &[class*="top"] {
+        top: 0;
+    }
+    &[class*="left"] {
+        left: 0;
+    }
+    &[class*="right"] {
+        right: 0;
+    }
+}

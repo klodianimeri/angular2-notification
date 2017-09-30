@@ -1,0 +1,1 @@
+{"version":3,"sources":["public_api.ts"],"names":[],"mappings":"AAAA,OAAC,EAAA,sBAAA,EAAA,MAAA,6DAAA,CAAA","file":"public_api.js","sourceRoot":"","sourcesContent":["export {HorizontalSliderModule} from './src/components/horizontal-slider/horizontal-slider.module';"]}

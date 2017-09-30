@@ -1,0 +1,5 @@
+@import "./_variables.scss";
+:host {
+    @include notification-position;
+    @include container-position;
+}

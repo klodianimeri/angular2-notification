@@ -1,0 +1,1 @@
+:host{position:fixed;display:block;z-index:1999}@media screen and (max-width:576px){:host{width:100%}}:host[class*=bottom]{bottom:0}:host[class*=top]{top:0}:host[class*=left]{left:0}:host[class*=right]{right:0}

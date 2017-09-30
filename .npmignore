@@ -1,0 +1,6 @@
+demo
+node_modules
+src
+e2e
+.ng_build
+.vscode
